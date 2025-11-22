@@ -17,32 +17,12 @@
 }
 
 body {
-    line-height: 1.5;
+    line-height: 1.6;
     background-color: #fff;
     color: #333;
     font-size: 16px;
     padding: 10px;
 }
-
-/* ===========================
-   Filter Section
-=========================== */
-/* Collapsible Filter Animation */
-.collapse-container {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.35s ease;
-}
-
-.collapse-container.show {
-    max-height: 1000px; /* large enough to fit filters */
-}
-
-#itemCount {
-    transition: opacity 0.3s ease;
-}
-
-
 
 /* ===========================
    Restaurant Header
@@ -53,50 +33,39 @@ body {
 }
 
 .restaurant-name {
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .restaurant-logo {
     max-width: 150px;
     height: auto;
-    margin-bottom: 8px;
-}
-
-.restaurant-description {
-    font-size: 1em;
-    color: #555;
     margin-bottom: 10px;
 }
 
+.restaurant-description {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 12px;
+}
+
 .restaurant-contact {
-    font-size: 0.9em;
+    font-size: 1em;
     color: #666;
 }
 
 .restaurant-contact p {
-    margin: 2px 0;
-}
-
-/* ===========================
-   Menu Container
-=========================== */
-.menu-container {
-    padding: 10px;
+    margin: 3px 0;
 }
 
 /* ===========================
    Categories
 =========================== */
-.category {
-    margin-bottom: 20px;
-}
-
 .category-name {
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
 }
@@ -104,43 +73,30 @@ body {
 /* ===========================
    Subcategories
 =========================== */
-.subcategory {
-    margin-bottom: 15px;
-}
-
 .subcategory-name {
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 500;
-    margin-bottom: 5px;
-}
-
-/* ===========================
-   Item List
-=========================== */
-.item-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 0;
+    margin-bottom: 6px;
 }
 
 /* ===========================
    Menu Items
 =========================== */
 .menu-item {
-    margin-bottom: 10px;
-    padding: 8px;
+    margin-bottom: 12px;
+    padding: 10px;
     border-bottom: 1px solid #eee;
 }
 
 .item-name {
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1.2em;
     display: block;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .item-price {
-    color: #2a9d8f; /* subtle highlight for price */
+    color: #2a9d8f;
     font-weight: 500;
     margin-right: 5px;
 }
@@ -148,36 +104,17 @@ body {
 .item-description {
     display: block;
     font-style: italic;
-    font-size: 0.95em;
+    font-size: 1.05em;
     color: #555;
-    margin-top: 3px;
+    margin-top: 4px;
+    line-height: 1.5;
 }
 
 .item-allergens {
     display: block;
-    font-size: 0.85em;
+    font-size: 0.95em;
     color: #888;
-    margin-top: 2px;
-}
-
-/* ===========================
-   Popup for User List
-=========================== */
-.user-list-popup {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5000;
-}
-
-.user-list-popup .popup-inner {
-    max-height: 80vh;
-    max-width: 400px;
-    overflow-y: auto;
+    margin-top: 3px;
 }
 
 /* ===========================
@@ -185,42 +122,73 @@ body {
 =========================== */
 @media (max-width: 768px) {
     body {
-        font-size: 15px;
-        padding: 8px;
+        font-size: 18px;
+        padding: 12px;
     }
 
     .restaurant-name {
-        font-size: 1.8em;
+        font-size: 2.6em;
     }
 
     .category-name {
-        font-size: 1.2em;
+        font-size: 1.8em;
     }
 
     .subcategory-name {
-        font-size: 1em;
+        font-size: 1.5em;
+    }
+
+    .item-name {
+        font-size: 1.6em;
+    }
+
+    .item-description {
+        font-size: 1.3em;
+        line-height: 1.45;
+    }
+
+    .item-allergens {
+        font-size: 1.1em;
     }
 
     .menu-item {
-        padding: 6px;
+        padding: 14px;
     }
 }
 
 @media (max-width: 480px) {
+    body {
+        font-size: 19px;
+        padding: 14px;
+    }
+
     .restaurant-name {
-        font-size: 1.6em;
+        font-size: 2.8em;
     }
 
     .category-name {
-        font-size: 1.1em;
+        font-size: 1.9em;
     }
 
     .subcategory-name {
-        font-size: 0.95em;
+        font-size: 1.6em;
+    }
+
+    .item-name {
+        font-size: 1.7em;
+    }
+
+    .item-description {
+        font-size: 1.35em;
+        line-height: 1.5;
+    }
+
+    .item-allergens {
+        font-size: 1.15em;
     }
 
     .menu-item {
-        padding: 5px;
+        padding: 16px;
     }
 }
 
@@ -358,7 +326,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="A1d2H">
+                                    <li class="menu-item" data-item-id="iv7U1">
                                         <strong class="item-name">Grilled Salmon</strong><br>
 
                                         
@@ -392,7 +360,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="dfxWT">
+                                    <li class="menu-item" data-item-id="T7I6r">
                                         <strong class="item-name">Beef Steak</strong><br>
 
                                         
@@ -411,7 +379,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="l16pv">
+                                    <li class="menu-item" data-item-id="Orvcm">
                                         <strong class="item-name">Chicken Skewers</strong><br>
 
                                         
@@ -430,7 +398,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="KnQnC">
+                                    <li class="menu-item" data-item-id="Vl3So">
                                         <strong class="item-name">BLT Sandwich</strong><br>
 
                                         
@@ -451,7 +419,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="Lmgvq">
+                                    <li class="menu-item" data-item-id="JdM4k">
                                         <strong class="item-name">Chicken Burger</strong><br>
 
                                         
@@ -472,7 +440,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="6logY">
+                                    <li class="menu-item" data-item-id="Qtk6P">
                                         <strong class="item-name">Pepperoni Pizza Slice</strong><br>
 
                                         
@@ -506,7 +474,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="9KskA">
+                                    <li class="menu-item" data-item-id="c4Wpk">
                                         <strong class="item-name">Veggie Wrap</strong><br>
 
                                         
@@ -527,7 +495,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="JGRnu">
+                                    <li class="menu-item" data-item-id="gRbaK">
                                         <strong class="item-name">Caesar Salad</strong><br>
 
                                         
@@ -548,7 +516,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="OICUb">
+                                    <li class="menu-item" data-item-id="UVx6v">
                                         <strong class="item-name">Veggie Burger</strong><br>
 
                                         
@@ -569,7 +537,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="voD2k">
+                                    <li class="menu-item" data-item-id="WZIyo">
                                         <strong class="item-name">Mozzarella Pizza Slice</strong><br>
 
                                         
@@ -609,7 +577,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="ZaOCQ">
+                                    <li class="menu-item" data-item-id="PQAo1">
                                         <strong class="item-name">Fried Shrimp Basket</strong><br>
 
                                         
@@ -643,7 +611,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="2oM54">
+                                    <li class="menu-item" data-item-id="e2yDK">
                                         <strong class="item-name">French Fries</strong><br>
 
                                         
@@ -662,7 +630,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="gBYHQ">
+                                    <li class="menu-item" data-item-id="nwo5e">
                                         <strong class="item-name">Onion Rings</strong><br>
 
                                         
@@ -683,7 +651,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="hWrWq">
+                                    <li class="menu-item" data-item-id="P61EZ">
                                         <strong class="item-name">Mozzarella Sticks</strong><br>
 
                                         
@@ -704,7 +672,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="X7sgo">
+                                    <li class="menu-item" data-item-id="WnXKK">
                                         <strong class="item-name">Nachos with Cheese</strong><br>
 
                                         
@@ -738,7 +706,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="Kyf9E">
+                                    <li class="menu-item" data-item-id="VZH9a">
                                         <strong class="item-name">Chicken Nuggets</strong><br>
 
                                         
@@ -778,7 +746,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="agMBM">
+                                    <li class="menu-item" data-item-id="WWhdV">
                                         <strong class="item-name">Cappuccino</strong><br>
 
                                         
@@ -799,7 +767,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="qhkdE">
+                                    <li class="menu-item" data-item-id="nM8wY">
                                         <strong class="item-name">Hot Chocolate</strong><br>
 
                                         
@@ -833,7 +801,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="m0lvE">
+                                    <li class="menu-item" data-item-id="BadJ9">
                                         <strong class="item-name">Iced Tea</strong><br>
 
                                         
@@ -852,7 +820,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="GSIR2">
+                                    <li class="menu-item" data-item-id="QE8E2">
                                         <strong class="item-name">Fresh Lemonade</strong><br>
 
                                         
@@ -871,7 +839,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="gJhjS">
+                                    <li class="menu-item" data-item-id="NaEDt">
                                         <strong class="item-name">Cola</strong><br>
 
                                         
@@ -890,7 +858,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="Wod9K">
+                                    <li class="menu-item" data-item-id="w9UXo">
                                         <strong class="item-name">Orange Juice</strong><br>
 
                                         
@@ -909,7 +877,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="D1das">
+                                    <li class="menu-item" data-item-id="Bdj7i">
                                         <strong class="item-name">Smoothie</strong><br>
 
                                         
@@ -930,7 +898,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="qGvWi">
+                                    <li class="menu-item" data-item-id="RZryE">
                                         <strong class="item-name">Mineral Water</strong><br>
 
                                         
@@ -968,7 +936,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="OEvvK">
+                                    <li class="menu-item" data-item-id="t2iNK">
                                         <strong class="item-name">Apple Pie</strong><br>
 
                                         
@@ -989,7 +957,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="i6F0N">
+                                    <li class="menu-item" data-item-id="rf4uh">
                                         <strong class="item-name">Churros</strong><br>
 
                                         
@@ -1023,7 +991,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="s5kCn">
+                                    <li class="menu-item" data-item-id="Y3Bcf">
                                         <strong class="item-name">Chocolate Muffin</strong><br>
 
                                         
@@ -1044,7 +1012,7 @@ body {
                                         </div>
                                     </li>
                                 
-                                    <li class="menu-item" data-item-id="0V6XC">
+                                    <li class="menu-item" data-item-id="edUCK">
                                         <strong class="item-name">Cheesecake</strong><br>
 
                                         
@@ -1078,7 +1046,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="v9eLX">
+                                    <li class="menu-item" data-item-id="GsKQP">
                                         <strong class="item-name">Fruit Salad</strong><br>
 
                                         
@@ -1110,7 +1078,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="6qlni">
+                                    <li class="menu-item" data-item-id="MKya2">
                                         <strong class="item-name">Pancakes with Syrup</strong><br>
 
                                         
@@ -1144,7 +1112,7 @@ body {
 
                             <ul class="item-list">
                                 
-                                    <li class="menu-item" data-item-id="SWPyq">
+                                    <li class="menu-item" data-item-id="VfIyX">
                                         <strong class="item-name">Ice Cream Cone</strong><br>
 
                                         
